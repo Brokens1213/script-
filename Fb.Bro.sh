@@ -1,0 +1,109 @@
+#!/bin/sh
+clear
+#edit auto baku hantam amnjinc ^_^
+blue='\033[34;1m'
+green='\033[32;1m'
+purple='\033[35;1m'
+cyan='\033[36;1m'
+red='\033[31;1m'
+white='\033[37;1m'
+yellow='\033[33;1m'
+figlet $purple 'Fbruty'
+sleep 4
+echo $red "Author=Brokens01"
+echo $red "instagram=K_0_0_n"
+echo $red "script part2 penginstalan"
+echo $green "Welcome to script Fbruty"
+echo $green "tekan enter untuk lanjut asw"
+sleep 2
+read username; 
+
+echo $green 'Selamat Datang '$username
+
+#Begini lu kalo mau ngedit pake kinemaster aja amnjinc :v
+
+read -p 'Masukkan username : ' nama1; 
+
+if [ $nama1 = 'EXZ' ];
+then
+    echo 'Tah eta username na'
+else
+    echo 'Yang bener donk ngisi username nya'
+sleep 2
+    echo 'jika belum mengetahui usename check ig'
+    exit
+fi
+echo -n 'Masukkan Password Anda : '
+read pw; 
+
+if [ $pw = 'Brokens' ];
+then
+    echo 'Password anda benar'
+else
+    echo 'Password nya salah amnjinc'
+    echo 'jika tidak tau check ig author'
+    exit
+fi
+echo $green "ini script penginstalan"
+#perulangan
+ulang='y'
+while [ $ulang = 'y' ];
+do
+  #apasih ajig
+  echo '1) install Red Hawk'
+  echo '2) install cmbah-v2'
+  echo '3) test ping biar gak lag'
+  echo '4) coming soon'
+  echo '0) exit '
+  #di edit?
+  read -p 'Masukkan Pilhan anda : ' pil; 
+  #Belajar donk jangan ngedit mulu brokens
+  if [ $pil = '1' ]
+  then
+      echo 'installing Red Hawk'
+      cd $HOME
+      apt update && apt upgrade -y
+      apt intall php -y
+      apt install git
+      git clone https://github.com/Tuhinshubhra/RED_HAWK
+      echo 'installing succes....! '
+      sleep 1
+      echo $red "tekan enter untuk keluar"
+      exit
+  #kondisi jika input = 2 maka akan menginstall Cmbah-v2
+  elif [ $pil = '2' ];
+  then
+      echo 'installing Cmbah v2 '
+      cd $HOME
+      apt update  && apt upgrade -y
+      apt install python -y
+      apt install git -y
+      git clone https://github.com/kadal15/Cmbah-v2
+      cd Cmbah-v2
+      pip2 install -r requirements.txt
+      echo 'installing succes...! '
+      sleep 1
+  #kondisi jika input = 3 maka akan menginstall LazyGo
+  elif [ $pil = '3' ];
+  then
+      echo 'Kalian akan dapat test ping waiting'
+      echo 'Tekan CTRL C untum stoped'
+      echo 'ini sangat berguna bagi player game online'
+      sleep 1
+      ping 8.8.8.8
+      sleep 1
+  #kondisi jika input = 0 maka akan keluar dari tools
+  elif [ $pil = '0' ];
+  then
+      echo 'bye bye.....!Jangan lupa follow ig '
+      sleep 2
+      exit
+  #kodisi else
+  else
+      echo 'ERROR : Wrong Input....! '
+      sleep 1
+      echo $ulang
+#hargai author donk amnjinc :v
+fi
+
+done
